@@ -9,16 +9,345 @@
     </client>
     <client>
         <Id>2</Id>
-        <name>Lê Thị</name>
-        <age>2</age>
-        <remain>2.0</remain>
-        <discount>2.0</discount>
+        <name>Nguyễn Văn Trường</name>
+        <age>35</age>
+        <remain>16500.0</remain>
+        <discount>5.0</discount>
     </client>
     <client>
         <Id>3</Id>
-        <name>Le</name>
-        <age>1</age>
-        <remain>1.0</remain>
-        <discount>1.0</discount>
+        <name>Trần Thị Hoa</name>
+        <age>28</age>
+        <remain>42000.0</remain>
+        <discount>15.0</discount>
+    </client>
+    <client>
+        <Id>4</Id>
+        <name>Lê Anh Tuấn</name>
+        <age>42</age>
+        <remain>8700.0</remain>
+        <discount>8.0</discount>
+    </client>
+    <client>
+        <Id>5</Id>
+        <name>Nguyễn Thị Minh</name>
+        <age>19</age>
+        <remain>27500.0</remain>
+        <discount>12.0</discount>
+    </client>
+    <client>
+        <Id>6</Id>
+        <name>Trần Văn Bình</name>
+        <age>51</age>
+        <remain>31200.0</remain>
+        <discount>7.0</discount>
+    </client>
+    <client>
+        <Id>7</Id>
+        <name>Lê Thị Hải</name>
+        <age>23</age>
+        <remain>19800.0</remain>
+        <discount>9.0</discount>
+    </client>
+    <client>
+        <Id>8</Id>
+        <name>Nguyễn Anh Khoa</name>
+        <age>39</age>
+        <remain>33500.0</remain>
+        <discount>11.0</discount>
+    </client>
+    <client>
+        <Id>9</Id>
+        <name>Trần Thị Nhung</name>
+        <age>27</age>
+        <remain>24000.0</remain>
+        <discount>13.0</discount>
+    </client>
+    <client>
+        <Id>10</Id>
+        <name>Lê Văn Hùng</name>
+        <age>46</age>
+        <remain>14700.0</remain>
+        <discount>6.0</discount>
+    </client>
+    <client>
+        <Id>11</Id>
+        <name>Nguyễn Thị Hoa</name>
+        <age>21</age>
+        <remain>29100.0</remain>
+        <discount>14.0</discount>
+    </client>
+    <client>
+        <Id>12</Id>
+        <name>Trần Văn Nam</name>
+        <age>32</age>
+        <remain>18400.0</remain>
+        <discount>10.0</discount>
+    </client>
+    <client>
+        <Id>13</Id>
+        <name>Lê Thị Mai</name>
+        <age>25</age>
+        <remain>26800.0</remain>
+        <discount>8.0</discount>
+    </client>
+    <client>
+        <Id>14</Id>
+        <name>Nguyễn Anh Tuấn</name>
+        <age>41</age>
+        <remain>12900.0</remain>
+        <discount>11.0</discount>
+    </client>
+    <client>
+        <Id>15</Id>
+        <name>Trần Thị Hương</name>
+        <age>29</age>
+        <remain>22700.0</remain>
+        <discount>7.0</discount>
+    </client>
+    <client>
+        <Id>16</Id>
+        <name>Lê Văn Hùng</name>
+        <age>38</age>
+        <remain>17600.0</remain>
+        <discount>9.0</discount>
+    </client>
+    <client>
+        <Id>17</Id>
+        <name>Nguyễn Thị Nhung</name>
+        <age>24</age>
+        <remain>31800.0</remain>
+        <discount>12.0</discount>
+    </client>
+    <client>
+        <Id>18</Id>
+        <name>Trần Anh Tuấn</name>
+        <age>47</age>
+        <remain>13500.0</remain>
+        <discount>6.0</discount>
+    </client>
+    <client>
+        <Id>19</Id>
+        <name>Lê Thị Hải</name>
+        <age>22</age>
+        <remain>28200.0</remain>
+        <discount>10.0</discount>
+    </client>
+    <client>
+        <Id>20</Id>
+        <name>Nguyễn Văn Bình</name>
+        <age>35</age>
+        <remain>20100.0</remain>
+        <discount>8.0</discount>
+    </client>
+    <client>
+        <Id>21</Id>
+        <name>Trần Thị Hoa</name>
+        <age>30</age>
+        <remain>24900.0</remain>
+        <discount>11.0</discount>
+    </client>
+    <client>
+        <Id>22</Id>
+        <name>Lê Anh Phương</name>
+        <age>41</age>
+        <remain>15800.0</remain>
+        <discount>7.0</discount>
+    </client>
+    <client>
+        <Id>23</Id>
+        <name>Nguyễn Thị Minh</name>
+        <age>26</age>
+        <remain>29700.0</remain>
+        <discount>13.0</discount>
+    </client>
+    <client>
+        <Id>24</Id>
+        <name>Trần Văn Hùng</name>
+        <age>43</age>
+        <remain>11400.0</remain>
+        <discount>9.0</discount>
+    </client>
+    <client>
+        <Id>25</Id>
+        <name>Lê Thị Hoa</name>
+        <age>28</age>
+        <remain>27100.0</remain>
+        <discount>12.0</discount>
+    </client>
+    <client>
+        <Id>26</Id>
+        <name>Nguyễn Anh Khoa</name>
+        <age>36</age>
+        <remain>21600.0</remain>
+        <discount>8.0</discount>
+    </client>
+    <client>
+        <Id>27</Id>
+        <name>Trần Thị Nhung</name>
+        <age>23</age>
+        <remain>25800.0</remain>
+        <discount>10.0</discount>
+    </client>
+    <client>
+        <Id>28</Id>
+        <name>Lê Văn Tùng</name>
+        <age>49</age>
+        <remain>14200.0</remain>
+        <discount>7.0</discount>
+    </client>
+    <client>
+        <Id>29</Id>
+        <name>Nguyễn Thị Hương</name>
+        <age>27</age>
+        <remain>30500.0</remain>
+        <discount>30.0</discount>
+    </client>
+    <client>
+        <Id>30</Id>
+        <name>John Doe</name>
+        <age>40</age>
+        <remain>15000.0</remain>
+        <discount>5.0</discount>
+    </client>
+    <client>
+        <Id>31</Id>
+        <name>Jane Smith</name>
+        <age>32</age>
+        <remain>22000.0</remain>
+        <discount>8.0</discount>
+    </client>
+    <client>
+        <Id>32</Id>
+        <name>David Johnson</name>
+        <age>55</age>
+        <remain>28000.0</remain>
+        <discount>10.0</discount>
+    </client>
+    <client>
+        <Id>33</Id>
+        <name>Sarah Williams</name>
+        <age>28</age>
+        <remain>19500.0</remain>
+        <discount>7.0</discount>
+    </client>
+    <client>
+        <Id>34</Id>
+        <name>Robert Davis</name>
+        <age>42</age>
+        <remain>32000.0</remain>
+        <discount>12.0</discount>
+    </client>
+    <client>
+        <Id>35</Id>
+        <name>Amy Wilson</name>
+        <age>37</age>
+        <remain>24500.0</remain>
+        <discount>9.0</discount>
+    </client>
+    <client>
+        <Id>36</Id>
+        <name>Michael Brown</name>
+        <age>45</age>
+        <remain>28000.0</remain>
+        <discount>10.0</discount>
+    </client>
+    <client>
+        <Id>37</Id>
+        <name>Emily Taylor</name>
+        <age>31</age>
+        <remain>21000.0</remain>
+        <discount>8.0</discount>
+    </client>
+    <client>
+        <Id>38</Id>
+        <name>William Anderson</name>
+        <age>49</age>
+        <remain>35000.0</remain>
+        <discount>15.0</discount>
+    </client>
+    <client>
+        <Id>39</Id>
+        <name>Olivia Clark</name>
+        <age>26</age>
+        <remain>18500.0</remain>
+        <discount>6.0</discount>
+    </client>
+    <client>
+        <Id>40</Id>
+        <name>James Martinez</name>
+        <age>34</age>
+        <remain>22500.0</remain>
+        <discount>8.0</discount>
+    </client>
+    <client>
+        <Id>41</Id>
+        <name>Sophia Lee</name>
+        <age>29</age>
+        <remain>20000.0</remain>
+        <discount>7.0</discount>
+    </client>
+    <client>
+        <Id>42</Id>
+        <name>Benjamin Mitchell</name>
+        <age>39</age>
+        <remain>27500.0</remain>
+        <discount>10.0</discount>
+    </client>
+    <client>
+        <Id>43</Id>
+        <name>Mia Turner</name>
+        <age>24</age>
+        <remain>18000.0</remain>
+        <discount>6.0</discount>
+    </client>
+    <client>
+        <Id>44</Id>
+        <name>Alexander Young</name>
+        <age>36</age>
+        <remain>25500.0</remain>
+        <discount>9.0</discount>
+    </client>
+    <client>
+        <Id>45</Id>
+        <name>Charlotte Hill</name>
+        <age>33</age>
+        <remain>23500.0</remain>
+        <discount>8.0</discount>
+    </client>
+    <client>
+        <Id>46</Id>
+        <name>Daniel Scott</name>
+        <age>43</age>
+        <remain>28500.0</remain>
+        <discount>11.0</discount>
+    </client>
+    <client>
+        <Id>47</Id>
+        <name>Harper Reed</name>
+        <age>27</age>
+        <remain>19500.0</remain>
+        <discount>7.0</discount>
+    </client>
+    <client>
+        <Id>48</Id>
+        <name>Ethan Phillips</name>
+        <age>38</age>
+        <remain>26500.0</remain>
+        <discount>9.0</discount>
+    </client>
+    <client>
+        <Id>49</Id>
+        <name>Amelia Turner</name>
+        <age>30</age>
+        <remain>20500.0</remain>
+        <discount>7.0</discount>
+    </client>
+    <client>
+        <Id>50</Id>
+        <name>Liam Parker</name>
+        <age>41</age>
+        <remain>29500.0</remain>
+        <discount>11.0</discount>
     </client>
 </clients>
