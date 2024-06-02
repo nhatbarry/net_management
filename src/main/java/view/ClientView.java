@@ -12,10 +12,6 @@ import javax.swing.table.DefaultTableModel;
 
 import entity.Client;
 
-/**
- *
- * @author nhatb
- */
 public class ClientView extends javax.swing.JFrame {
 
     /**
@@ -71,6 +67,7 @@ public class ClientView extends javax.swing.JFrame {
         jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("quản lý khách hàng"); // NOI18N
         setResizable(false);
 
         idLabel.setText("ID");
