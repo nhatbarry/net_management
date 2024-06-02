@@ -514,6 +514,10 @@ public class ClientView extends javax.swing.JFrame {
         sortClientNameBtn.addActionListener(listener);
     }
 
+    public void addSortClientIDListener(ActionListener listener){
+        sortClientIDBtn.addActionListener(listener);
+    }
+
     public void addListClientSelectionListener(ListSelectionListener listener) {
         clientTable.getSelectionModel().addListSelectionListener(listener);
     }

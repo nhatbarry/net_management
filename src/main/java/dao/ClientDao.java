@@ -85,6 +85,17 @@ public class ClientDao {
         });
     }
 
+    public void sortClientByID() {
+        Collections.sort(listClients, new Comparator<Client>() {
+            public int compare(Client client1, Client client2) {
+                if (client1.getId() > client2.getId()) {
+                    return 1;
+                }
+                return -1;
+            }
+        });
+    }
+
     public List<Client> getListClients() {
         return listClients;
     }
