@@ -28,6 +28,7 @@ public class ClientController {
         view.addSortClientIDListener(new SortClientIDListener());
         view.addListClientSelectionListener(new ListClientSelectionListener());
         view.addSearchListener(new SearchNameListener());
+        view.addRemainSearchListener(new SearchRemainListener());
     }
 
     public void showClientView() {
@@ -114,7 +115,7 @@ public class ClientController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            String searchField = clientView.getSearchField();
+            String searchField = clientView.getNameSearchField();
             List<Client> searchResults = new ArrayList<Client>();
             boolean isFound = false;
 
@@ -132,6 +133,32 @@ public class ClientController {
             }
 
         }
+    }
+
+    class SearchRemainListener implements ActionListener{
+        private List<Client> clientList = clientDao.getListClients();
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Double remainSearchField1 = Double.parseDouble(clientView.getRemainSearchField1());
+            Double remainSearchField2 = Double.parseDouble(clientView.getRemainSearchField2());
+            List<Client> results = new ArrayList<Client>();
+            boolean isFound = false;
+
+            for (Client client : clientList){
+                if(client.getRemain() < remainSearchField2 && client.getRemain() > remainSearchField1){
+                    results.add(client);
+                    isFound = true;
+                }
+            }
+            if (isFound) {
+                clientView.showListClients(results);
+            }
+            else {
+                clientView.showMessage("Không tìm thấy");
+            }
+        }
+        
     }
 
     class ListClientSelectionListener implements ListSelectionListener {

@@ -189,6 +189,7 @@ public class ClientView extends javax.swing.JFrame {
             }
         });
 
+        remainSearchField1.setText("0");
         remainSearchField1.setToolTipText("Nhập tên cần tìm");
         remainSearchField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -243,18 +244,15 @@ public class ClientView extends javax.swing.JFrame {
                                 .addComponent(staticBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(17, 17, 17))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(addClientBtn)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(editClientBtn))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(deleteClientBtn)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(clearBtn))
-                                    .addComponent(sortClientNameBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(sortClientIDBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))))
+                                .addComponent(addClientBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(editClientBtn))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(deleteClientBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(clearBtn))
+                            .addComponent(sortClientNameBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sortClientIDBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -353,6 +351,17 @@ public class ClientView extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, message);
     }
 
+    public double findMaxRemaining(List<Client> list){
+        int size = list.size();
+        double max = 0;
+        for(int i = 0; i < size; i++){
+            if (list.get(i).getRemain() > max){
+                max = list.get(i).getRemain();
+            }
+        }
+        return max;
+    }
+
     public void showListClients(List<Client> list) {
         int size = list.size();
         Object[][] clients = new Object[size][5];
@@ -364,6 +373,7 @@ public class ClientView extends javax.swing.JFrame {
             clients[i][4] = list.get(i).getDiscount();
         }
         clientTable.setModel(new DefaultTableModel(clients, columnNames));
+        this.remainSearchField2.setText("" + findMaxRemaining(list));
     }
 
     public void fillClientfromSelectedRow() {
@@ -426,8 +436,16 @@ public class ClientView extends javax.swing.JFrame {
         return null;
     }
 
-    public String getSearchField() {
+    public String getNameSearchField() {
         return this.nameSearchField.getText();
+    }
+
+    public String getRemainSearchField1(){
+        return this.remainSearchField1.getText();
+    }
+
+    public String getRemainSearchField2(){
+        return this.remainSearchField2.getText();
     }
 
     private boolean validateName() {
@@ -524,6 +542,10 @@ public class ClientView extends javax.swing.JFrame {
 
     public void addSearchListener(ActionListener listener) {
         nameSearchBtn.addActionListener(listener);
+    }
+
+    public void addRemainSearchListener(ActionListener listener){
+        remainSearchBtn.addActionListener(listener);
     }
 
     private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_idFieldActionPerformed

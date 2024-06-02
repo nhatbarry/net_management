@@ -68,23 +68,18 @@
                               <Component id="staticBtn" max="32767" attributes="0"/>
                               <EmptySpace min="17" pref="17" max="17" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="addClientBtn" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="editClientBtn" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="deleteClientBtn" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="clearBtn" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="sortClientNameBtn" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
-                                  <Component id="sortClientIDBtn" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="addClientBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
+                              <Component id="editClientBtn" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="deleteClientBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="clearBtn" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="sortClientNameBtn" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
+                          <Component id="sortClientIDBtn" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -366,6 +361,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="remainSearchField1">
       <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
         <Property name="toolTipText" type="java.lang.String" value="Nh&#x1ead;p t&#xea;n c&#x1ea7;n t&#xec;m"/>
       </Properties>
       <Events>
