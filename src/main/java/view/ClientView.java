@@ -407,7 +407,7 @@ public class ClientView extends javax.swing.JFrame {
     }
 
     public String getSearchField() {
-        return this.nameField.getText();
+        return this.searchField.getText();
     }
 
     private boolean validateName() {

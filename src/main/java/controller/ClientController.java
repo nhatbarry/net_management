@@ -108,7 +108,7 @@ public class ClientController {
             boolean isFound = false;
 
             for (Client client : clientList) {
-                if (client.getName().equals(searchField)) {
+                if (client.getName().contains(searchField)) {
                     searchResults.add(client);
                     isFound = true;
                 } 
