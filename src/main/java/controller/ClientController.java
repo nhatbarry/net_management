@@ -22,7 +22,8 @@ public class ClientController {
         view.addEditClientListener(new EditClientListener());
         view.addDeleteClientListener(new DeleteClientListener());
         view.addClearListener(new ClearClientListener());
-        view.addListStudentSelectionListener(new ListClientSelectionListener());
+        view.addSortClientNameListener(new SortClientNameListener());
+        view.addListClientSelectionListener(new ListClientSelectionListener());
     }
 
     public void showClientView(){
@@ -80,6 +81,16 @@ public class ClientController {
         @Override
         public void actionPerformed(ActionEvent e) {
             clientView.clearClientInfo();
+        }
+        
+    }
+
+    class SortClientNameListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            clientDao.sortClientByName();
+            clientView.showListClients(clientDao.getListClients());
         }
         
     }

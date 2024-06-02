@@ -433,7 +433,7 @@ public class ClientView extends javax.swing.JFrame {
         sortClientNameBtn.addActionListener(listener);
     }
     
-    public void addListStudentSelectionListener(ListSelectionListener listener) {
+    public void addListClientSelectionListener(ListSelectionListener listener) {
         clientTable.getSelectionModel().addListSelectionListener(listener);
     }
     private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idFieldActionPerformed
