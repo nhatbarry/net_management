@@ -85,13 +85,6 @@
         <discount>10.0</discount>
     </client>
     <client>
-        <Id>13</Id>
-        <name>Lê Thị Mai</name>
-        <age>25</age>
-        <remain>26800.0</remain>
-        <discount>8.0</discount>
-    </client>
-    <client>
         <Id>14</Id>
         <name>Nguyễn Anh Tuấn</name>
         <age>41</age>
@@ -334,7 +327,7 @@
         <name>Ethan Phillips</name>
         <age>38</age>
         <remain>26500.0</remain>
-        <discount>9.0</discount>
+        <discount>9.03</discount>
     </client>
     <client>
         <Id>49</Id>
