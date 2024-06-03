@@ -14,6 +14,20 @@ public class Computer implements Serializable{
     private String model;
     private boolean isUsed;
     private double price;
+    private String clientName;
+    private double usedTime;
+    public String getClientName() {
+        return clientName;
+    }
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
+    }
+    public double getUsedTime() {
+        return usedTime;
+    }
+    public void setUsedTime(double usedTime) {
+        this.usedTime = usedTime;
+    }
     public int getId() {
         return Id;
     }

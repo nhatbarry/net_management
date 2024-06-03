@@ -11,6 +11,7 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
 import entity.Client;
+import entity.Computer;
 
 public class ClientView extends javax.swing.JFrame {
 
@@ -20,7 +21,9 @@ public class ClientView extends javax.swing.JFrame {
     private String[] columnNames = new String[] {
             "ID", "Tên", "Tuổi", "Tài khoản", "Giảm giá"
     };
-    Client x;
+    private String[] comColumnNames = new String[] {
+        "ID", "Model", "Giá máy", "Thời gian", "Người dùng"
+    };
 
     public ClientView() {
         initComponents();
@@ -759,6 +762,19 @@ public class ClientView extends javax.swing.JFrame {
         this.remainSearchField2.setText("" + findMaxRemaining(list));
     }
 
+    public void showListComputers(List<Computer> list){
+        int size = list.size();
+        Object[][] computers = new Object[size][5];
+        for(int i = 0; i < size; i++){
+            computers[i][0] = list.get(i).getId();
+            computers[i][1] = list.get(i).getModel();
+            computers[i][2] = list.get(i).getPrice();
+            computers[i][3] = list.get(i).getUsedTime();
+            computers[i][4] = list.get(i).getClientName();
+        }
+        comTable.setModel(new DefaultTableModel(computers, comColumnNames));
+    }
+
     public void fillClientfromSelectedRow() {
         int row = clientTable.getSelectedRow();
         if (row >= 0) {
@@ -773,6 +789,28 @@ public class ClientView extends javax.swing.JFrame {
         }
     }
 
+    public void fillComputerfromSelectedRow(){
+        int row = comTable.getSelectedRow();
+        if (row >= 0){
+            idComField.setText(comTable.getModel().getValueAt(row, 0).toString());
+            modelComField.setText(comTable.getModel().getValueAt(row, 1).toString());
+            priceComField.setText(comTable.getModel().getValueAt(row, 2).toString());
+            timeComField.setText(comTable.getModel().getValueAt(row, 3).toString());
+            userComField.setText(comTable.getModel().getValueAt(row, 4).toString());
+            editComBtn.setEnabled(true);
+            deleteComBtn.setEnabled(true);
+            addComBtn.setEnabled(false);
+            if(userComField != null){
+                returnComBtn.setEnabled(true);
+                rentComBtn.setEnabled(false);
+            }
+            else{
+                returnComBtn.setEnabled(false);
+                rentComBtn.setEnabled(true);
+            }
+        }
+    }
+
     public void clearClientInfo() {
         idField.setText("");
         nameField.setText("");
@@ -782,6 +820,17 @@ public class ClientView extends javax.swing.JFrame {
         editClientBtn.setEnabled(false);
         deleteClientBtn.setEnabled(false);
         addClientBtn.setEnabled(true);
+    }
+
+    public void clearComInfo() {
+        idComField.setText("");
+        modelComField.setText("");
+        priceComField.setText("");
+        timeComField.setText("");
+        userComField.setText("");
+        editComBtn.setEnabled(false);
+        deleteComBtn.setEnabled(false);
+        addComBtn.setEnabled(true);
     }
 
     public void showClient(Client client) {
@@ -794,6 +843,18 @@ public class ClientView extends javax.swing.JFrame {
         editClientBtn.setEnabled(true);
         deleteClientBtn.setEnabled(true);
         addClientBtn.setEnabled(false);
+    }
+
+    public void showCom(Computer computer) {
+        fillComputerfromSelectedRow();
+        idComField.setText("" + computer.getId());
+        modelComField.setText(computer.getModel());
+        priceComField.setText("" + computer.getPrice());
+        timeComField.setText("" + computer.getUsedTime());
+        userComField.setText("" + computer.getClientName());
+        editComBtn.setEnabled(true);
+        deleteComBtn.setEnabled(true);
+        addComBtn.setEnabled(false);
     }
 
     public Client getClientInfo() {
@@ -811,10 +872,29 @@ public class ClientView extends javax.swing.JFrame {
             client.setDiscount(Double.parseDouble(discountField.getText()));
             return client;
         } catch (Exception e) {
-            // Handle the exception appropriately
-            e.printStackTrace(); // Print the stack trace for debugging
-            // Or display an error message to the user
+            e.printStackTrace();
             showMessage("An error occurred while creating the client");
+        }
+        return null;
+    }
+
+    public Computer getComputerInfo() {
+        if (!validateComModel() || !validatePrice())
+            return null;
+
+        try {
+            Computer computer = new Computer();
+            if (idComField.getText() != null && !"".equals(idComField.getText())) {
+                computer.setId(Integer.parseInt(idComField.getText()));
+            }
+            computer.setModel(modelComField.getText());
+            computer.setPrice(Double.parseDouble(priceComField.getText()));
+            computer.setUsedTime(Double.parseDouble(timeComField.getText()));
+            computer.setClientName(userComField.getText());
+            return computer;
+        } catch (Exception e) {
+            e.printStackTrace();
+            showMessage("An error occurred while creating the computer");
         }
         return null;
     }
@@ -823,12 +903,24 @@ public class ClientView extends javax.swing.JFrame {
         return this.nameSearchField.getText();
     }
 
+    public String getComModelSearchField(){
+        return this.modelComField.getText();
+    }
+
     public String getRemainSearchField1(){
         return this.remainSearchField1.getText();
     }
 
+    public String getComPriceSearchField1(){
+        return this.comPriceSearchField1.getText();
+    }
+
     public String getRemainSearchField2(){
         return this.remainSearchField2.getText();
+    }
+
+    public String getComPriceSearchField2(){
+        return this.comPriceSearchField2.getText();
     }
 
     private boolean validateName() {
@@ -836,6 +928,16 @@ public class ClientView extends javax.swing.JFrame {
         if (name == null || "".equals(name.trim())) {
             nameField.requestFocus();
             showMessage("Name không được trống.");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateComModel() {
+        String name = modelComField.getText();
+        if (name == null || "".equals(name.trim())) {
+            modelComField.requestFocus();
+            showMessage("Model không được trống.");
             return false;
         }
         return true;
@@ -857,11 +959,27 @@ public class ClientView extends javax.swing.JFrame {
         return true;
     }
 
+    private boolean validatePrice() {
+        try {
+            Double price = Double.parseDouble(priceComField.getText().trim());
+            if (price < 0) {
+                priceComField.requestFocus();
+                showMessage("Price không hợp lệ");
+                return false;
+            }
+        } catch (Exception e) {
+            priceComField.requestFocus();
+            showMessage("Price không hợp lệ!");
+            return false;
+        }
+        return true;
+    }
+
     private boolean validateRemain() {
         try {
             Double remain = Double.parseDouble(remainField.getText().trim());
             if (remain < 0) {
-                ageField.requestFocus();
+                remainField.requestFocus();
                 showMessage("Remain không hợp lệ, số tiền phải lớn hơn 0.");
                 return false;
             }
@@ -872,6 +990,22 @@ public class ClientView extends javax.swing.JFrame {
         }
         return true;
     }
+
+    // private boolean validateTime() {
+    //     try {
+    //         Double time = Double.parseDouble(timeComField.getText().trim());
+    //         if (time < 0) {
+    //             timeComField.requestFocus();
+    //             showMessage("Time không hợp lệ");
+    //             return false;
+    //         }
+    //     } catch (Exception e) {
+    //         timeComField.requestFocus();
+    //         showMessage("Time không hợp lệ");
+    //         return false;
+    //     }
+    //     return true;
+    // }
 
     private boolean validateDiscount() {
         try {
