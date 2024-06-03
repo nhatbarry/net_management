@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "client")
+@XmlRootElement(name = "computer")
 @XmlAccessorType(XmlAccessType.FIELD)
 
 public class Computer implements Serializable{

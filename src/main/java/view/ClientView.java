@@ -65,28 +65,34 @@ public class ClientView extends javax.swing.JFrame {
         remainSearchField2 = new javax.swing.JTextField();
         remainSearchBtn = new javax.swing.JButton();
         nameSearchBtn = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        idleCompTable = new javax.swing.JTable();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        inUseCompTable = new javax.swing.JTable();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        compIDLabel = new javax.swing.JLabel();
-        compIDField = new javax.swing.JTextField();
-        compNameLabel = new javax.swing.JLabel();
-        compNameField = new javax.swing.JTextField();
-        compPriceLabel = new javax.swing.JLabel();
-        compPriceField = new javax.swing.JTextField();
-        clientNameLabel2 = new javax.swing.JLabel();
-        clientNameField2 = new javax.swing.JTextField();
-        clientRemainLabel2 = new javax.swing.JLabel();
-        clientRemainField2 = new javax.swing.JTextField();
-        timeUsedLabel = new javax.swing.JLabel();
-        timeUsedField = new javax.swing.JTextField();
-        returnCompBtn = new javax.swing.JButton();
-        rentCompBtn = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        idLabel1 = new javax.swing.JLabel();
+        idComField = new javax.swing.JTextField();
+        idLabel2 = new javax.swing.JLabel();
+        modelComField = new javax.swing.JTextField();
+        idLabel3 = new javax.swing.JLabel();
+        priceComField = new javax.swing.JTextField();
+        idLabel4 = new javax.swing.JLabel();
+        timeComField = new javax.swing.JTextField();
+        idLabel5 = new javax.swing.JLabel();
+        userComField = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        comTable = new javax.swing.JTable();
+        addComBtn = new javax.swing.JButton();
+        editComBtn = new javax.swing.JButton();
+        deleteComBtn = new javax.swing.JButton();
+        clearComBtn = new javax.swing.JButton();
+        sortUsingComBtn = new javax.swing.JButton();
+        sortIdleComBtn = new javax.swing.JButton();
+        comNameSearchField = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        comPriceSearchField1 = new javax.swing.JTextField();
+        comPriceSearchField2 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        comPriceSearchBtn = new javax.swing.JButton();
+        ComNameSearchBtn = new javax.swing.JButton();
+        rentComBtn = new javax.swing.JButton();
+        returnComBtn = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
 
@@ -293,24 +299,22 @@ public class ClientView extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
+                        .addGap(63, 63, 63)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(nameSearchField)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(remainSearchField1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(remainSearchField2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(nameSearchField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(39, 39, 39)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(nameSearchBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(jLabel2)
+                                .addGap(18, 18, 18)
+                                .addComponent(remainSearchField2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(nameSearchBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
                             .addComponent(remainSearchBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(6, 6, 6))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,209 +355,286 @@ public class ClientView extends javax.swing.JFrame {
                         .addGap(9, 9, 9)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(sortClientIDBtn)
-                            .addComponent(nameSearchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nameSearchBtn))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                        .addComponent(staticBtn))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(remainSearchField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(remainSearchField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel2))
-                            .addComponent(remainSearchBtn))))
+                .addComponent(sortClientIDBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nameSearchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nameSearchBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(staticBtn)
+                    .addComponent(jLabel1)
+                    .addComponent(remainSearchField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(remainSearchField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(remainSearchBtn))
                 .addGap(68, 68, 68))
         );
 
         jTabbedPane2.addTab("Khách hàng", jPanel3);
 
-        idleCompTable.setModel(new javax.swing.table.DefaultTableModel(
+        idLabel1.setText("ID máy");
+
+        idComField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idComFieldActionPerformed(evt);
+            }
+        });
+
+        idLabel2.setText("Model máy");
+
+        modelComField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modelComFieldActionPerformed(evt);
+            }
+        });
+
+        idLabel3.setText("Giá máy");
+
+        priceComField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                priceComFieldActionPerformed(evt);
+            }
+        });
+
+        idLabel4.setText("Thời gian");
+
+        timeComField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                timeComFieldActionPerformed(evt);
+            }
+        });
+
+        idLabel5.setText("Người dùng");
+
+        userComField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userComFieldActionPerformed(evt);
+            }
+        });
+
+        comTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "ID máy", "Tên máy", "Giá máy"
+                "ID máy", "Model", "Giá máy", "Thời gian", "Người dùng"
             }
         ));
-        jScrollPane4.setViewportView(idleCompTable);
+        jScrollPane2.setViewportView(comTable);
 
-        inUseCompTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "ID máy", "Tên máy", "Thòi gian đã dùng", "Người đang dùng"
+        addComBtn.setText("Thêm");
+        addComBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addComBtnActionPerformed(evt);
             }
-        ));
-        jScrollPane5.setViewportView(inUseCompTable);
+        });
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel3.setText("Máy đang sử dụng");
+        editComBtn.setText("Sửa");
+        editComBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editComBtnActionPerformed(evt);
+            }
+        });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel4.setText("Máy trống");
+        deleteComBtn.setText("Xóa");
+        deleteComBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteComBtnActionPerformed(evt);
+            }
+        });
 
-        compIDLabel.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
-        compIDLabel.setText("ID Máy");
+        clearComBtn.setText("Clear");
+        clearComBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearComBtnActionPerformed(evt);
+            }
+        });
 
-        compIDField.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        sortUsingComBtn.setText("Máy đang dùng");
+        sortUsingComBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortUsingComBtnActionPerformed(evt);
+            }
+        });
 
-        compNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
-        compNameLabel.setText("Tên máy");
+        sortIdleComBtn.setText("Máy trống");
+        sortIdleComBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortIdleComBtnActionPerformed(evt);
+            }
+        });
 
-        compNameField.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        comNameSearchField.setToolTipText("Nhập tên cần tìm");
+        comNameSearchField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comNameSearchFieldActionPerformed(evt);
+            }
+        });
 
-        compPriceLabel.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
-        compPriceLabel.setText("Giá máy");
+        jLabel3.setText("From");
 
-        compPriceField.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        comPriceSearchField1.setText("0");
+        comPriceSearchField1.setToolTipText("Nhập tên cần tìm");
+        comPriceSearchField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comPriceSearchField1ActionPerformed(evt);
+            }
+        });
 
-        clientNameLabel2.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
-        clientNameLabel2.setText("Người dùng");
+        comPriceSearchField2.setToolTipText("Nhập tên cần tìm");
+        comPriceSearchField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comPriceSearchField2ActionPerformed(evt);
+            }
+        });
 
-        clientNameField2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel4.setText("To");
 
-        clientRemainLabel2.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
-        clientRemainLabel2.setText("Tài khoản");
+        comPriceSearchBtn.setText("Search by price");
 
-        clientRemainField2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        ComNameSearchBtn.setText("Search by name");
 
-        timeUsedLabel.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
-        timeUsedLabel.setText("Thời gian sử dụng");
+        rentComBtn.setText("Thuê máy");
+        rentComBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rentComBtnActionPerformed(evt);
+            }
+        });
 
-        timeUsedField.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-
-        returnCompBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        returnCompBtn.setText("Trả máy");
-
-        rentCompBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rentCompBtn.setText("Thuê máy");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(209, 209, 209))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(compNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addGap(32, 32, 32)
-                                    .addComponent(compNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(compIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(compIDField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(compPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(clientRemainLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(clientNameField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addGap(32, 32, 32)
-                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(clientRemainField2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(timeUsedField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(clientNameLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(compPriceField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(timeUsedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(returnCompBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(rentCompBtn)))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(169, 169, 169))))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(compIDLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(compIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)
-                        .addComponent(compNameLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(compNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(compPriceLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(compPriceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(clientNameLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(clientNameField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)
-                        .addComponent(clientRemainLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(clientRemainField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(timeUsedLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(timeUsedField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(returnCompBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rentCompBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-
-        jTabbedPane2.addTab("Máy tính", jPanel4);
+        returnComBtn.setText("Trả máy");
+        returnComBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                returnComBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 797, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(idLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(idLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(idLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(idLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(idLabel5))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(idComField, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(modelComField, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(priceComField, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(timeComField, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userComField, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(rentComBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(returnComBtn))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(deleteComBtn)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(clearComBtn))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(addComBtn)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(editComBtn))
+                                .addComponent(sortUsingComBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(sortIdleComBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(comNameSearchField)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(comPriceSearchField1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(comPriceSearchField2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ComNameSearchBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(comPriceSearchBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(idLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(idComField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(idLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(modelComField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(idLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(priceComField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(idLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(timeComField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(idLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userComField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(editComBtn)
+                            .addComponent(addComBtn))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(deleteComBtn)
+                            .addComponent(clearComBtn))
+                        .addGap(18, 18, 18)
+                        .addComponent(sortUsingComBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(sortIdleComBtn))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(comNameSearchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ComNameSearchBtn))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(comPriceSearchField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(comPriceSearchField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4)
+                            .addComponent(comPriceSearchBtn))
+                        .addGap(15, 15, 15))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(returnComBtn)
+                            .addComponent(rentComBtn))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        jTabbedPane2.addTab("Dịch vụ", jPanel1);
+        jTabbedPane2.addTab("Máy tính", jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -584,6 +665,70 @@ public class ClientView extends javax.swing.JFrame {
     private void remainSearchField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_remainSearchField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_remainSearchField2ActionPerformed
+
+    private void idComFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idComFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idComFieldActionPerformed
+
+    private void modelComFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelComFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modelComFieldActionPerformed
+
+    private void priceComFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priceComFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_priceComFieldActionPerformed
+
+    private void timeComFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeComFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_timeComFieldActionPerformed
+
+    private void userComFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userComFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userComFieldActionPerformed
+
+    private void addComBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addComBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addComBtnActionPerformed
+
+    private void editComBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editComBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editComBtnActionPerformed
+
+    private void deleteComBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteComBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteComBtnActionPerformed
+
+    private void clearComBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearComBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearComBtnActionPerformed
+
+    private void sortUsingComBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortUsingComBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sortUsingComBtnActionPerformed
+
+    private void sortIdleComBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortIdleComBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sortIdleComBtnActionPerformed
+
+    private void comNameSearchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comNameSearchFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comNameSearchFieldActionPerformed
+
+    private void comPriceSearchField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comPriceSearchField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comPriceSearchField1ActionPerformed
+
+    private void comPriceSearchField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comPriceSearchField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comPriceSearchField2ActionPerformed
+
+    private void rentComBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rentComBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rentComBtnActionPerformed
+
+    private void returnComBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnComBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_returnComBtnActionPerformed
 
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(this, message);
@@ -881,29 +1026,33 @@ public class ClientView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ComNameSearchBtn;
     private javax.swing.JButton addClientBtn;
+    private javax.swing.JButton addComBtn;
     private javax.swing.JTextField ageField;
     private javax.swing.JLabel ageLabel;
     private javax.swing.JButton clearBtn;
-    private javax.swing.JTextField clientNameField2;
-    private javax.swing.JLabel clientNameLabel2;
-    private javax.swing.JTextField clientRemainField2;
-    private javax.swing.JLabel clientRemainLabel2;
+    private javax.swing.JButton clearComBtn;
     private javax.swing.JTable clientTable;
-    private javax.swing.JTextField compIDField;
-    private javax.swing.JLabel compIDLabel;
-    private javax.swing.JTextField compNameField;
-    private javax.swing.JLabel compNameLabel;
-    private javax.swing.JTextField compPriceField;
-    private javax.swing.JLabel compPriceLabel;
+    private javax.swing.JTextField comNameSearchField;
+    private javax.swing.JButton comPriceSearchBtn;
+    private javax.swing.JTextField comPriceSearchField1;
+    private javax.swing.JTextField comPriceSearchField2;
+    private javax.swing.JTable comTable;
     private javax.swing.JButton deleteClientBtn;
+    private javax.swing.JButton deleteComBtn;
     private javax.swing.JTextField discountField;
     private javax.swing.JLabel discountLabel;
     private javax.swing.JButton editClientBtn;
+    private javax.swing.JButton editComBtn;
+    private javax.swing.JTextField idComField;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel idLabel;
-    private javax.swing.JTable idleCompTable;
-    private javax.swing.JTable inUseCompTable;
+    private javax.swing.JLabel idLabel1;
+    private javax.swing.JLabel idLabel2;
+    private javax.swing.JLabel idLabel3;
+    private javax.swing.JLabel idLabel4;
+    private javax.swing.JLabel idLabel5;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -911,26 +1060,28 @@ public class ClientView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTextField modelComField;
     private javax.swing.JTextField nameField;
     private javax.swing.JLabel nameLabel;
     private javax.swing.JButton nameSearchBtn;
     private javax.swing.JTextField nameSearchField;
+    private javax.swing.JTextField priceComField;
     private javax.swing.JTextField remainField;
     private javax.swing.JLabel remainLabel;
     private javax.swing.JButton remainSearchBtn;
     private javax.swing.JTextField remainSearchField1;
     private javax.swing.JTextField remainSearchField2;
-    private javax.swing.JButton rentCompBtn;
-    private javax.swing.JButton returnCompBtn;
+    private javax.swing.JButton rentComBtn;
+    private javax.swing.JButton returnComBtn;
     private javax.swing.JButton sortClientIDBtn;
     private javax.swing.JButton sortClientNameBtn;
+    private javax.swing.JButton sortIdleComBtn;
+    private javax.swing.JButton sortUsingComBtn;
     private javax.swing.JButton staticBtn;
-    private javax.swing.JTextField timeUsedField;
-    private javax.swing.JLabel timeUsedLabel;
+    private javax.swing.JTextField timeComField;
+    private javax.swing.JTextField userComField;
     // End of variables declaration//GEN-END:variables
 }
