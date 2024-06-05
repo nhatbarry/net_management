@@ -640,6 +640,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="timeComField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="timeComFieldActionPerformed"/>
               </Events>
@@ -710,7 +713,7 @@
             </Container>
             <Component class="javax.swing.JButton" name="addComBtn">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Th&#xea;m"/>
+                <Property name="text" type="java.lang.String" value="Th&#xea;m m&#xe1;y"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addComBtnActionPerformed"/>
@@ -718,7 +721,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="editComBtn">
               <Properties>
-                <Property name="text" type="java.lang.String" value="S&#x1eed;a"/>
+                <Property name="text" type="java.lang.String" value="S&#x1eed;a m&#xe1;y"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editComBtnActionPerformed"/>
@@ -726,7 +729,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="deleteComBtn">
               <Properties>
-                <Property name="text" type="java.lang.String" value="X&#xf3;a"/>
+                <Property name="text" type="java.lang.String" value="X&#xf3;a m&#xe1;y"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteComBtnActionPerformed"/>

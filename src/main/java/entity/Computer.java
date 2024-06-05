@@ -10,9 +10,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 
 public class Computer implements Serializable{
+    private static final long serialVersionUID = 1L;
     private int Id;
     private String model;
-    private boolean isUsed;
+    private boolean isUsed = false;
     private double price;
     private String clientName;
     private double usedTime;

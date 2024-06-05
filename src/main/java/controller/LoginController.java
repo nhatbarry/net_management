@@ -29,6 +29,8 @@ public class LoginController {
                 clientView = new ClientView();
                 ClientController clientController = new ClientController(clientView);
                 clientController.showClientView();
+                ComputerController computerController = new ComputerController(clientView);
+                computerController.showComputerView();
                 loginView.setVisible(false);
             } else {
                 loginView.showMessage("username hoặc password không đúng.");

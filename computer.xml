@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<computers>
+    <computer>
+        <Id>1</Id>
+        <model>com1</model>
+        <isUsed>true</isUsed>
+        <price>12000.0</price>
+        <clientName>Emmy</clientName>
+        <usedTime>0.0</usedTime>
+    </computer>
+</computers>

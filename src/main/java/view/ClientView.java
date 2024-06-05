@@ -1,6 +1,7 @@
 
 package view;
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -402,6 +403,7 @@ public class ClientView extends javax.swing.JFrame {
 
         idLabel4.setText("Thời gian");
 
+        timeComField.setText("0");
         timeComField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 timeComFieldActionPerformed(evt);
@@ -429,21 +431,21 @@ public class ClientView extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(comTable);
 
-        addComBtn.setText("Thêm");
+        addComBtn.setText("Thêm máy");
         addComBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addComBtnActionPerformed(evt);
             }
         });
 
-        editComBtn.setText("Sửa");
+        editComBtn.setText("Sửa máy");
         editComBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editComBtnActionPerformed(evt);
             }
         });
 
-        deleteComBtn.setText("Xóa");
+        deleteComBtn.setText("Xóa máy");
         deleteComBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteComBtnActionPerformed(evt);
@@ -800,13 +802,18 @@ public class ClientView extends javax.swing.JFrame {
             editComBtn.setEnabled(true);
             deleteComBtn.setEnabled(true);
             addComBtn.setEnabled(false);
-            if(userComField != null){
+
+            if(!comTable.getModel().getValueAt(row, 4).toString().isEmpty()){
                 returnComBtn.setEnabled(true);
                 rentComBtn.setEnabled(false);
+                timeComField.setEditable(false);
+                userComField.setEditable(false);
             }
             else{
                 returnComBtn.setEnabled(false);
                 rentComBtn.setEnabled(true);
+                timeComField.setEditable(true);
+                userComField.setEditable(true);
             }
         }
     }
@@ -851,7 +858,7 @@ public class ClientView extends javax.swing.JFrame {
         modelComField.setText(computer.getModel());
         priceComField.setText("" + computer.getPrice());
         timeComField.setText("" + computer.getUsedTime());
-        userComField.setText("" + computer.getClientName());
+        userComField.setText(computer.getClientName());
         editComBtn.setEnabled(true);
         deleteComBtn.setEnabled(true);
         addComBtn.setEnabled(false);
@@ -923,6 +930,13 @@ public class ClientView extends javax.swing.JFrame {
         return this.comPriceSearchField2.getText();
     }
 
+    public double getTimeRented(){
+        return Double.parseDouble(timeComField.getText());
+    }
+
+    public String getUserCom(){
+        return this.userComField.getText();
+    }
     private boolean validateName() {
         String name = nameField.getText();
         if (name == null || "".equals(name.trim())) {
@@ -1063,6 +1077,42 @@ public class ClientView extends javax.swing.JFrame {
 
     public void addRemainSearchListener(ActionListener listener){
         remainSearchBtn.addActionListener(listener);
+    }
+
+    public void addAddComListener(ActionListener listener){
+        addComBtn.addActionListener(listener);
+    }
+
+    public void addEditComListener(ActionListener listener){
+        editComBtn.addActionListener(listener);
+    }
+
+    public void addDeleteComListener(ActionListener listener){
+        deleteComBtn.addActionListener(listener);
+    }
+
+    public void addClearComListener(ActionListener listener){
+        clearComBtn.addActionListener(listener);
+    }
+
+    public void addSortIdleComListener(ActionListener listener){
+        sortIdleComBtn.addActionListener(listener);
+    }
+
+    public void addSortUsingComListener(ActionListener listener){
+        sortUsingComBtn.addActionListener(listener);
+    }
+
+    public void addListComSelectionListener(ListSelectionListener listener) {
+        comTable.getSelectionModel().addListSelectionListener(listener);
+    }
+
+    public void addReturnComListener(ActionListener listener){
+        returnComBtn.addActionListener(listener);
+    }
+
+    public void addRentComListener(ActionListener listener){
+        rentComBtn.addActionListener(listener);
     }
 
     private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_idFieldActionPerformed
